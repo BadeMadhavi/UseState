@@ -2,9 +2,13 @@ import { useState } from "react";
 
 function UseState(){
     const [inputvalue,setInputvalue]=useState('')
+    const handlechange= (e)=>{
+        setInputvalue(e.target.value)
+    }
     return(
         <div className="input">
-<input type="text" onChange={handlechnage} value={inputvalue} placeholder="write a message"/>
+            <h2>value = {inputvalue}</h2>
+<input type="text" onChange={handlechange} value={inputvalue} placeholder="write a message"/>
         </div>
     )
 }
